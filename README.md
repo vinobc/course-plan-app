@@ -24,6 +24,28 @@ A web application for faculty to create and manage course delivery plans.
 
 1. Clone the repository:
 
-```bash
-git clone [repository-url]
-```
+git clone https://github.com/vinobc/course-plan-app.git
+
+2. Install dependencies:
+
+npm install
+
+3. Start development server:
+
+npm run dev
+
+4.Build for production:
+
+npm run build
+
+## Deployment
+
+WIP 2 b deployed in a cloud
+
+## Contributors
+
+Dr. Vinob Chander R - Initial work
+
+## License
+
+This project is private and intended for use at Amity University Bengaluru
