@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 
 function Register() {
-  const [adminCode, setAdminCode] = useState("");
-  const [showAdminField, setShowAdminField] = useState(false);
+  //   const [adminCode, setAdminCode] = useState("");
+  //   const [showAdminField, setShowAdminField] = useState(false);
   const navigate = useNavigate();
   const { register } = useAuth();
   const [error, setError] = useState("");
@@ -33,8 +33,8 @@ function Register() {
         {
           name: formData.name,
           school: formData.school,
-        },
-        showAdminField ? adminCode : null
+        }
+        // showAdminField ? adminCode : null
       );
       navigate("/dashboard");
     } catch (err) {
@@ -133,7 +133,7 @@ function Register() {
             />
           </div>
 
-          <div className="mb-4">
+          {/* <div className="mb-4">
             <label className="flex items-center">
               <input
                 type="checkbox"
@@ -158,7 +158,7 @@ function Register() {
                 required
               />
             </div>
-          )}
+          )} */}
 
           <button
             type="submit"
