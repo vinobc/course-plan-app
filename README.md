@@ -7,7 +7,7 @@ A web application for faculty to create and manage course delivery plans.
 - Faculty registration and authentication
 - Course plan creation and management
 - PDF generation of course plans
-- Admin dashboard for monitoring
+- Admin dashboard for monitoring //coming soon
 - Responsive design
 
 ## Tech Stack
@@ -38,9 +38,9 @@ npm run dev
 
 npm run build
 
-## Deployment
+## Cloud Deployment
 
-WIP 2 b deployed in a cloud
+coming soon
 
 ## Contributors
 
