@@ -7,18 +7,7 @@ A web application for faculty to create and manage course delivery plans.
 - Faculty registration and authentication
 - Course plan creation and management
 - PDF generation of course plans
-- Admin dashboard for monitoring //coming soon
 - Responsive design
-
-## Tech Stack
-
-- React 18
-- Vite
-- Firebase Authentication
-- Cloud Firestore
-- Tailwind CSS
-- React Router
-- PDF Generation
 
 ## Local Development
 
@@ -37,10 +26,6 @@ npm run dev
 4.Build for production:
 
 npm run build
-
-## Cloud Deployment
-
-coming soon
 
 ## Contributors
 
