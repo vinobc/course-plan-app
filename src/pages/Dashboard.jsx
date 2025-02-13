@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { auth, db } from "../firebase";
 import { collection, query, where, getDocs } from "firebase/firestore";
+import Layout from "../components/Layout";
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -45,16 +46,12 @@ function Dashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
-      <header className="bg-white shadow">
-        <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-gray-900">
-            Course Plan Dashboard
-          </h1>
-          <div>
-            <span className="mr-4 text-gray-600">
-              {auth.currentUser?.email}
-            </span>
+    <Layout>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="flex justify-between items-center mb-6">
+          <h1 className="text-2xl font-bold">Course Plan Dashboard</h1>
+          <div className="flex items-center gap-4">
+            <span className="text-gray-600">{auth.currentUser?.email}</span>
             <button
               onClick={handleLogout}
               className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
@@ -63,9 +60,7 @@ function Dashboard() {
             </button>
           </div>
         </div>
-      </header>
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
           <button
             onClick={() => navigate("/create-plan")}
@@ -104,8 +99,8 @@ function Dashboard() {
             </p>
           )}
         </div>
-      </main>
-    </div>
+      </div>
+    </Layout>
   );
 }
 
