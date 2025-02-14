@@ -29,8 +29,4 @@ npm run build
 
 ## Contributors
 
-Dr. Vinob Chander R - Initial work
-
-## License
-
-This project is private and intended for use at Amity University Bengaluru
+Dr. Vinob Chander R
