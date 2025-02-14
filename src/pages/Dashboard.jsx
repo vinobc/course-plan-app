@@ -79,17 +79,36 @@ function Dashboard() {
               {coursePlans.map((plan) => (
                 <div
                   key={plan.id}
-                  className="border p-4 rounded hover:bg-gray-50 cursor-pointer"
-                  onClick={() => navigate(`/view-plan/${plan.id}`)}
+                  className="border p-4 rounded hover:bg-gray-50"
                 >
-                  <h3 className="font-medium">{plan.courseTitle}</h3>
-                  <p className="text-gray-600">
-                    Course Code: {plan.courseCode}
-                  </p>
-                  <p className="text-gray-600">Semester: {plan.semester}</p>
-                  <p className="text-sm text-gray-500">
-                    Created on: {new Date(plan.createdAt).toLocaleDateString()}
-                  </p>
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <h3 className="font-medium">{plan.courseTitle}</h3>
+                      <p className="text-gray-600">
+                        Course Code: {plan.courseCode}
+                      </p>
+                      <p className="text-gray-600">Semester: {plan.semester}</p>
+                      <p className="text-gray-600">Slot: {plan.slot}</p>
+                      <p className="text-sm text-gray-500">
+                        Created on:{" "}
+                        {new Date(plan.createdAt).toLocaleDateString()}
+                      </p>
+                    </div>
+                    <div className="flex gap-2">
+                      <button
+                        onClick={() => navigate(`/edit-plan/${plan.id}`)}
+                        className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600"
+                      >
+                        Edit
+                      </button>
+                      <button
+                        onClick={() => navigate(`/view-plan/${plan.id}`)}
+                        className="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600"
+                      >
+                        View
+                      </button>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
