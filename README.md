@@ -20,12 +20,16 @@ A web application for faculty members to create, manage, and track course plans.
 
 ### 1. Clone the Repository
 
+```
 git clone https://github.com/your-username/course-plan-app.git
 cd course-plan-app
+```
 
 ### 2. Install Dependencies
 
+```
 npm install
+```
 
 ### 3. Firebase Setup
 
@@ -43,6 +47,7 @@ npm install
 
 Create or update `src/firebase.js` with your Firebase configuration:
 
+```
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
@@ -61,10 +66,13 @@ export const auth = getAuth(app);
 export const db = getFirestore(app);
 
 export default app;
+```
 
 ### 5. Run the Application
 
+```
 npm run dev
+```
 
 The application will start running at `http://localhost:5173` by default. If port 5173 is already in use, Vite will automatically use the next available port (like 5174).
 
@@ -90,6 +98,7 @@ The application will start running at `http://localhost:5173` by default. If por
 
 ## Project Structure
 
+```
 src/
 ├── components/ # Reusable UI components
 ├── contexts/ # Context providers
@@ -97,6 +106,7 @@ src/
 ├── styles/ # CSS and Tailwind styles
 ├── firebase.js # Firebase configuration
 └── App.jsx # Main application component
+```
 
 ## Contributing
 
@@ -131,12 +141,14 @@ src/
    - By default, the app runs on port 5173
    - If port 5173 is in use, Vite will automatically try the next available port
    - To specify a custom port, you can configure it in vite.config.js:
-     export default defineConfig({
-     server: {
-     port: YOUR_PREFERRED_PORT,
-     },
-     // ... other config
-     });
+   ```
+    export default defineConfig({
+    server: {
+    port: YOUR_PREFERRED_PORT,
+    },
+    // ... other config
+    });
+   ```
 
 ## License
 
